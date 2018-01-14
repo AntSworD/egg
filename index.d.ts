@@ -351,7 +351,7 @@ export interface Router extends KoaRouter {
   /**
    * restful router api
    */
-  resources(name: string, prefix: string, middleware: any): Router;
+  resources(name: string, prefix: string, ...middleware: any[]): Router;
 
   /**
    * @param {String} name - Router name
@@ -511,7 +511,7 @@ export interface Application extends EggApplication {
    * HTTP put method
    */
   put(path: string, fn: string): void;
-  put(path: string, ...middleware: any[]): void;
+  put(path: string, ...middleware|: any[]): void;
 
   /**
    * HTTP delete method
